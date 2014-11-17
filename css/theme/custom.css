@@ -1,0 +1,84 @@
+.show-off {
+    color: #cb4b16;
+}
+
+.big-input {
+    padding: 6px 10px;
+    font-size: 18px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.big-button {
+    font-size: 18px;
+    padding: 6px;
+    vertical-align: middle;
+}
+
+.big-checkbox {
+    width: 25px;
+    height: 25px;
+}
+
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.no-bullets {
+    list-style: none !important;
+}
+
+.beer-list {
+    height: 199px;
+    overflow: auto;
+    font-size: .8em !important;
+    text-align: center !important;
+}
+
+.beer-brewery {
+    font-size: .5em !important;
+}
+
+.img {
+    vertical-align: middle !important;
+}
+
+.quote {
+    color: #eee8d5;
+}
+
+.quote h2 {
+    color: #eee8d5;
+}
+
+.title {
+    color: #eee8d5;
+}
+
+.title h1, .title h2, .title h3 {
+    color: #eee8d5;
+}
+
+.white {
+    color: #fdf6e3;
+}
+
+.magenta {
+    color: #d33682;
+}
+
+.reveal pre code.javascript {
+    max-height: none;
+}
+
+.title a {
+    color: #073642 !important;
+    text-decoration: underline!important;
+}
+
+.title a:hover {
+    color: #586e75!important;
+    text-decoration: none!important;
+}
+
