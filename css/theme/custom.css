@@ -82,3 +82,15 @@
     text-decoration: none!important;
 }
 
+
+.typewriter {
+  font-family: courier, fixed;
+  font-size: 13px;
+  white-space: pre-wrap;
+  margin-right: -6px;
+}
+
+.caret {
+  background: #777;
+}
+
