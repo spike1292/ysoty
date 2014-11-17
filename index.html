@@ -9,25 +9,26 @@
 		<meta name="description" content="Henk - Young Sogetist of the Year">
 		<meta name="author" content="Henk Bakker">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
-		<link rel="stylesheet" href="css/theme/custom.css">
+		
+		<link rel="stylesheet" href="lib/css/custom.css">
 
-        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-        <script>
-            if( window.location.search.match( /print-pdf/gi ) ) {
-                var link = document.createElement( 'link' );
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'css/print/pdf.css';
-                document.getElementsByTagName( 'head' )[0].appendChild( link );
-            }
-        </script>
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -37,76 +38,80 @@
 	<body>
 
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-            <section>
-				<h3>Young Sogetist of the Year</h3>
-                <h1><span class="show-off">Henk</span></h1>
+	            <section>
+					<h3>Young Sogetist of the Year</h3>
+	                <h1><span class="show-off">Henk</span></h1>
 
 
-                <img src="examples/assets/henk.jpg" height="300"/>
+	                <img src="lib/images/henk.jpg" height="300"/>
 
-            </section>
+	            </section>
 
-            <section data-state="iamdev" data-background-color="#2aa198" class="quote">
-			    <h2><span id="typewriter" class="typewriter"></span>
-			    <span class="caret">&nbsp;</span></h2>
-            </section>
+	            <section data-state="iamdev" data-background-color="#2aa198" class="quote">
+				    <h2>
+						<span id="typewriter" class="typewriter"></span>
+				    	<span class="caret">&nbsp;</span>
+					</h2>
+	            </section>
 			
-			<section data-background="examples/assets/responsive.jpg"></section>
+				<section data-background="lib/images/responsive.jpg"></section>
 			
-			<section>
-				<img src="examples/assets/angular.png" />
-			</section>
+				<section>
+					<img src="lib/images/angular.png" />
+				</section>
 			
-			<section data-background="examples/assets/pres.jpg"></section>
+				<section data-background="lib/images/pres.jpg"></section>
 			
-			<section data-background="examples/assets/HTML5_sticker.png"></section>
-            
-            </div>
-        </div>
+				<section data-background="lib/images/HTML5_sticker.png"></section>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.min.js"></script>
-		<script src="js/typewriter-bundle.min.js"></script>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="lib/js/typewriter-bundle.min.js"></script>
 
 		<script>
-		// Full list of configuration options available here:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: false,
-			progress: false,
-			history: true,
-			center: true,
 
-			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
 
-			// Parallax scrolling
-			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-			// parallaxBackgroundSize: '2100px 900px',
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-			// Optional libraries used to extend on reveal.js
-			dependencies: [
-				// { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				//{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				// { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
-				//{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true }
-				//{ src: 'plugin/multiplex/client.js', async: true }
-				//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-			]
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
 
-		});
-		var typewriter = require('typewriter');
-		var twSpan = document.getElementById('typewriter');
-		var tw = typewriter(twSpan).withAccuracy(90).withMinimumSpeed(5).withMaximumSpeed(13).build();
-		Reveal.addEventListener('iamdev', function() {
-			twSpan.innerHTML = "";
-			tw.put('$ ').waitRange(500, 1000).type('I\'am a developer');
-		}, false);
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					// { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+// 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+// 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+// 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+// 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+// 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+			
+			var typewriter = require('typewriter');
+			var twSpan = document.getElementById('typewriter');
+			var tw = typewriter(twSpan).withAccuracy(90).withMinimumSpeed(5).withMaximumSpeed(13).build();
+			Reveal.addEventListener('iamdev', function() {
+				twSpan.innerHTML = "";
+				tw.put('$ ').waitRange(500, 1000).type('I\'am a developer');
+			}, false);
 
 		</script>
-			
+
 	</body>
 </html>
