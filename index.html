@@ -65,65 +65,47 @@
             </div>
         </div>
 
-        <!--<script src="lib/js/head.min.js"></script>-->
+        <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
 		<script src="js/typewriter-bundle.min.js"></script>
 
 		<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: false,
+			history: true,
+			center: true,
 
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                controls: false,
-                progress: false,
-                history: true,
-                center: true,
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
 
-                multiplex: {
-                    // Example values. To generate your own, see the socket.io server instructions.
-                    secret: '', // null so the clients do not have control of the master presentation
-                    id: 'b8230cc77436495e', // id, obtained from socket.io server
-                    url: 'modernjavascript.herokuapp.com:80' // Location of socket.io server
-                },
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				// { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				//{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				// { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+				//{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true }
+				//{ src: 'plugin/multiplex/client.js', async: true }
+				//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+			]
 
-                // Parallax scrolling
-                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-                // parallaxBackgroundSize: '2100px 900px',
+		});
+		var typewriter = require('typewriter');
+		var twSpan = document.getElementById('typewriter');
+		var tw = typewriter(twSpan).withAccuracy(90).withMinimumSpeed(5).withMaximumSpeed(13).build();
+		Reveal.addEventListener('iamdev', function() {
+			twSpan.innerHTML = "";
+			tw.put('$ ').waitRange(500, 1000).type('I\'am a developer');
+		}, false);
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					//{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					//{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					// { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
-                    //{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true }
-                    //{ src: 'plugin/multiplex/client.js', async: true }
-					//{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-				]
-
-			});
-			
-  		  var typewriter = require('typewriter');
-
-  		  var twSpan = document.getElementById('typewriter');
-
-  		  var tw = typewriter(twSpan).withAccuracy(90)
-  		                             .withMinimumSpeed(5)
-  		                             .withMaximumSpeed(13)
-  		                             .build();
-			
-			Reveal.addEventListener( 'iamdev', function() {
-				twSpan.innerHTML = "";
-	  		  tw.put('$ ')
-	  		    .waitRange(500, 1000)
-	  		    .type('I\'am a developer');
-			}, false );
-			
-		  
 		</script>
 			
 	</body>
